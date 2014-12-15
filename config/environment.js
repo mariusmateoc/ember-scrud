@@ -4,6 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'ember-scrud',
     environment: environment,
+    usePodsByDefault: true,
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
