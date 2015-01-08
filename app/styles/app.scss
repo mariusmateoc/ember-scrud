@@ -1,6 +1,29 @@
 
-/*/app/styles/app.scss*/
+//app/styles/app.scss
+@import "bootstrap";
 
-html, body {
-  margin: 20px;
+html,
+body {
+  margin-top: 2rem;
+}
+
+.css-serial {
+  counter-reset: serial-number;
+
+  td:first-child:before {
+    content: counter(serial-number);
+    counter-increment: serial-number;
+  }
+}
+
+.page-header {
+  margin-bottom: 4rem;
+
+  button {
+    margin-top: 1.25rem;
+  }
+}
+
+.text-bold {
+  font-weight: bold;
 }
