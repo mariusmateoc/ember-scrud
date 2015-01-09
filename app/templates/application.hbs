@@ -4,13 +4,13 @@
 <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">SCRUD</a>
+      {{#link-to 'index' classNames="navbar-brand"}}SCRUD{{/link-to}}
     </div>
 
     <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="#">Clients</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Employees</a></li>
+      {{#link-to 'clients' tagName='li'}}<a href="#">Clients</a>{{/link-to}}
+      {{#link-to 'projects' tagName='li'}}<a href="#">Projects</a>{{/link-to}}
+      {{#link-to 'employees' tagName='li'}}<a href="#">Employees</a>{{/link-to}}
     </ul>
   </div>
 </nav>
@@ -23,9 +23,9 @@
 <nav class="navbar navbar-default navbar-fixed-bottom">
   <div class="container">
     <ul class="nav navbar-nav">
-      <li><a href="#">Clients</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Employees</a></li>
+      <li>{{#link-to 'clients'}}Clients{{/link-to}}</li>
+      <li>{{#link-to 'projects'}}Projects{{/link-to}}</li>
+      <li>{{#link-to 'employees'}}Employees{{/link-to}}</li>
     </ul>
   </div>
 </nav>
