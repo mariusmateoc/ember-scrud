@@ -14,7 +14,13 @@ Router.map(function() {
     path: "client/1"
   }, function() {});
 
-  this.resource("project", { path: "project/1" }, function() {});
+  this.resource("project", {
+    path: "project/1"
+  }, function() {});
+
+  this.resource("employee", {
+    path: "employee/1"
+  }, function() {});
 });
 
 export default Router;
