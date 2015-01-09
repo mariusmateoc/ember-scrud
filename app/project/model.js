@@ -1,3 +1,5 @@
+
+// /app/project/model.js
 import DS from 'ember-data';
 
 var Project = DS.Model.extend({

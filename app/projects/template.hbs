@@ -20,26 +20,14 @@
     </tr>
   </thead>
   <tbody>
+    {{#each}}
     <tr>
       <!--intentionally left blank-->
       <td class="text-bold"></td>
-      <td>Website Redesign</td>
-      <td>Design</td>
-      <td>12000</td>
+      <td>{{name}}</td>
+      <td>{{projectType}}</td>
+      <td>{{amount}}</td>
     </tr>
-    <tr>
-      <!--intentionally left blank-->
-      <td class="text-bold"></td>
-      <td>Backend Development</td>
-      <td>Development</td>
-      <td>23400</td>
-    </tr>
-    <tr>
-      <!--intentionally left blank-->
-      <td class="text-bold"></td>
-      <td>Social Media Presence</td>
-      <td>Marketing</td>
-      <td>7800</td>
-    </tr>
+    {{/each}}
   </tbody>
 </table>

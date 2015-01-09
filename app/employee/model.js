@@ -1,3 +1,5 @@
+
+// /app/employee/model.js
 import DS from 'ember-data';
 
 var Employee = DS.Model.extend({
@@ -34,7 +36,6 @@ Employee.reopenClass({
       email: 'christopher.anderson@mail.com',
       occupation: 'Backend Developer'
     }
-
   ]
 });
 

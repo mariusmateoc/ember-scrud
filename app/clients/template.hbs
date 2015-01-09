@@ -21,29 +21,15 @@
     </tr>
   </thead>
   <tbody>
+    {{#each}}
     <tr>
       <!--intentionally left blank-->
       <td class="text-bold"></td>
-      <td>Apple.Inc</td>
-      <td>apple@mail.com</td>
-      <td>10.10.2014</td>
-      <td>4</td>
+      <td>{{companyName}}</td>
+      <td>{{email}}</td>
+      <td>{{createdAt}}</td>
+      <td>{{totalProjects}}</td>
     </tr>
-    <tr>
-      <!--intentionally left blank-->
-      <td class="text-bold"></td>
-      <td>Telefonica</td>
-      <td>telefonica@mail.com</td>
-      <td>08.12.2014</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <!--intentionally left blank-->
-      <td class="text-bold"></td>
-      <td>Delloite</td>
-      <td>delloite@mail.com</td>
-      <td>09.07.2014</td>
-      <td>3</td>
-    </tr>
+    {{/each}}
   </tbody>
 </table>
