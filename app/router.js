@@ -1,3 +1,5 @@
+
+// /app/router.js
 import Ember from "ember";
 import config from "./config/environment";
 
@@ -7,20 +9,12 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.resource("clients", function() {});
+  this.resource("client", { path: 'client/:client_id'}, function() {});
   this.resource("projects", function() {});
   this.resource("employees", function() {});
 
-  this.resource("client", {
-    path: "client/1"
-  }, function() {});
-
-  this.resource("project", {
-    path: "project/1"
-  }, function() {});
-
-  this.resource("employee", {
-    path: "employee/1"
-  }, function() {});
+  this.resource("project", { path: "project/1" }, function() {});
+  this.resource("employee", { path: "employee/1" }, function() {});
 });
 
 export default Router;

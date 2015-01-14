@@ -22,14 +22,14 @@
   </thead>
   <tbody>
     {{#each}}
-    <tr>
-      <!--intentionally left blank-->
-      <td class="text-bold"></td>
-      <td>{{companyName}}</td>
-      <td>{{email}}</td>
-      <td>{{createdAt}}</td>
-      <td>{{totalProjects}}</td>
-    </tr>
+      {{#link-to 'client' this tagName='tr'}}
+        <!--intentionally left blank-->
+        <td class="text-bold"></td>
+        <td>{{companyName}}</td>
+        <td>{{email}}</td>
+        <td>{{createdAt}}</td>
+        <td>{{totalProjects}}</td>
+      {{/link-to}}
     {{/each}}
   </tbody>
-</table>
+</table
