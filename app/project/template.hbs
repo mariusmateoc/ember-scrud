@@ -2,7 +2,7 @@
 {{!-- /app/project/template.hbs --}}
 <div class="row page-header">
   <div class="col-xs-3">
-    <h2>Project Name</h2>
+    <h2>{{name}}</h2>
   </div>
   <div class="col xs-3 pull-right">
     <button type="button" class="btn btn-success">Edit</button>
@@ -14,13 +14,13 @@
   <div class="col-md-5">
     <dl class="dl-horizontal">
       <dt>Project Name:</dt>
-      <dd>projectName</dd>
+      <dd>{{name}}</dd>
       <hr>
       <dt>Project Type:</dt>
-      <dd>projectType</dd>
+      <dd>{{projectType}}</dd>
       <hr>
       <dt>Amount:</dt>
-      <dd>amount</dd>
+      <dd>{{amount}}</dd>
       <hr>
     </dl>
   </div>

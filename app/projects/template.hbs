@@ -21,13 +21,13 @@
   </thead>
   <tbody>
     {{#each}}
-    <tr>
-      <!--intentionally left blank-->
-      <td class="text-bold"></td>
-      <td>{{name}}</td>
-      <td>{{projectType}}</td>
-      <td>{{amount}}</td>
-    </tr>
+      {{#link-to 'project' this tagName='tr'}}
+        <!--intentionally left blank-->
+        <td class="text-bold"></td>
+        <td>{{name}}</td>
+        <td>{{projectType}}</td>
+        <td>{{amount}}</td>
+      {{/link-to}}
     {{/each}}
   </tbody>
 </table>

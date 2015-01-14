@@ -11,10 +11,9 @@ Router.map(function() {
   this.resource("clients", function() {});
   this.resource("client", { path: 'client/:client_id'}, function() {});
   this.resource("projects", function() {});
+  this.resource("project", { path: "project/:project_id" }, function() {});
   this.resource("employees", function() {});
-
-  this.resource("project", { path: "project/1" }, function() {});
-  this.resource("employee", { path: "employee/1" }, function() {});
+  this.resource("employee", { path: "employee/:employee_id" }, function() {});
 });
 
 export default Router;
