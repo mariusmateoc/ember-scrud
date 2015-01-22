@@ -5,8 +5,8 @@
     <h2>Full Name</h2>
   </div>
   <div class="col xs-3 pull-right">
-    <button type="button" class="btn btn-success">Edit</button>
-    <button type="button" class="btn btn-danger">Delete</button>
+    <button type="button" class="btn btn-success" {{action 'editEmployee'}}>Edit</button>
+    <button type="button" class="btn btn-danger" {{action 'deleteEmployee'}}>Delete</button>
   </div>
 </div>
 
@@ -28,40 +28,41 @@
     </dl>
   </div>
 
+  {{#if isEditing}}
   {{!-- This will apper when user click on edit button --}}
   <div class="col-md-6 col-md-offset-1">
     <form class="form-horizontal">
       <div class="form-group">
         <label for="firstName" class="col-sm-3 control-label">First Name</label>
         <div class="col-sm-9">
-          <input type="text" class="form-control" placeholder="First Name">
+          {{input type="text" class="form-control" value=firstName placeholder="First Name"}}
         </div>
       </div>
       <div class="form-group">
         <label for="lastName" class="col-sm-3 control-label">Last Name</label>
         <div class="col-sm-9">
-          <input type="text" class="form-control" placeholder="Last Name">
+          {{input type="text" class="form-control" value=lastName placeholder="Last Name"}}
         </div>
       </div>
       <div class="form-group">
         <label for="email" class="col-sm-3 control-label">Email</label>
         <div class="col-sm-9">
-          <input type="email" class="form-control" placeholder="Email">
+          {{input type="email" class="form-control" value=email placeholder="Email"}}
         </div>
       </div>
       <div class="form-group">
         <label for="occupation" class="col-sm-3 control-label">Occupation</label>
         <div class="col-sm-9">
-          <input type="text" class="form-control" placeholder="Occupation">
+          {{input type="text" class="form-control" value=occupation placeholder="Occupation"}}
         </div>
       </div>
       <div class="form-group">
         <div class="col-sm-offset-3 col-sm-9">
-          <button type="submit" class="btn btn-primary">Save</button>
-          <button type="submit" class="btn btn-default">Cancel</button>
+          <button type="submit" class="btn btn-primary" {{action 'saveChanges'}}>Save</button>
+          <button type="submit" class="btn btn-default" {{action 'cancelChanges'}}>Cancel</button>
         </div>
       </div>
     </form>
   </div>
-
+  {{/if}}
 </div>
