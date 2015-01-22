@@ -5,8 +5,8 @@
     <h2>{{companyName}}</h2>
   </div>
   <div class="col xs-3 pull-right">
-    <button type="button" class="btn btn-success">Edit</button>
-    <button type="button" class="btn btn-danger">Delete</button>
+    <button type="button" class="btn btn-success" {{action 'editClient'}}>Edit</button>
+    <button type="button" class="btn btn-danger" {{action 'deleteClient'}}>Delete</button>
   </div>
 </div>
 
@@ -28,28 +28,30 @@
     </dl>
   </div>
 
+  {{#if isEditing}}
   {{!-- This will apper when user click on edit button --}}
   <div class="col-md-6 col-md-offset-1">
     <form class="form-horizontal">
       <div class="form-group">
         <label for="companyName" class="col-sm-3 control-label">Company Name</label>
         <div class="col-sm-9">
-          <input type="text" class="form-control" placeholder="company name">
+          {{input type="text" class="form-control" value=companyName placeholder="company name"}}
         </div>
       </div>
       <div class="form-group">
         <label for="email" class="col-sm-3 control-label">Email</label>
         <div class="col-sm-9">
-          <input type="email" class="form-control" placeholder="email">
+          {{input type="email" class="form-control" value=email placeholder="email"}}
         </div>
       </div>
       <div class="form-group">
         <div class="col-sm-offset-3 col-sm-9">
-          <button type="submit" class="btn btn-primary">Save</button>
-          <button type="submit" class="btn btn-default">Cancel</button>
+          <button type="submit" class="btn btn-primary" {{action 'saveChanges'}}>Save</button>
+          <button class="btn btn-default" {{action 'cancelChanges'}}>Cancel</button>
         </div>
       </div>
     </form>
   </div>
+  {{/if}}
 
 </div>
