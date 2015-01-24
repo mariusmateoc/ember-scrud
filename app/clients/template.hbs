@@ -6,9 +6,11 @@
     <h2>Clients</h2>
   </div>
   <div class="col xs-3 pull-right">
-    <button type="button" class="btn btn-success">Add New Client</button>
+    {{#link-to 'clients.new' tagName="button" type="button" class="btn btn-success"}}Add New Client{{/link-to}}
   </div>
 </div>
+
+{{outlet}}
 
 <table class="table table-hover css-serial">
   <thead>
