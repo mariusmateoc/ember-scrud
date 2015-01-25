@@ -1,6 +1,19 @@
 
 {{!-- /app/clients/new/template.hbs --}}
 
-{{#crud-modal title="Create New Client" submitButton="Create Client" submit="createNewClient" cancel="cancelNewClient"}}
-  This is the content of my modal #1
+{{#crud-modal title="Create New Client" submitButtonText="Add New Client" submit="createNewClient" cancel="cancelNewClient"}}
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label for="companyName" class="col-sm-3 control-label">Company Name:</label>
+      <div class="col-sm-9">
+        {{input type="text" class="form-control" value=client.companyName placeholder="Please insert company name"}}
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email" class="col-sm-3 control-label">Email:</label>
+      <div class="col-sm-9">
+        {{input type="email" class="form-control" value=email placeholder="Please insert company email"}}
+      </div>
+    </div>
+  </form>
 {{/crud-modal}}

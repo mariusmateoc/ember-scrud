@@ -4,8 +4,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   // Set default names for our buttons
-  cancelButton: "Cancel",
-  submitButton: "Yes",
+  cancelButtonText: "Cancel",
+  submitButtonText: "Yes",
 
   actions: {
     submit: function() {
