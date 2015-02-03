@@ -22,7 +22,9 @@ Router.map(function() {
     path: "project/:project_id"
   }, function() {});
 
-  this.resource("employees", function() {});
+  this.resource("employees", function() {
+    this.route("new");
+  });
 
   this.resource("employee", {
     path: "employee/:employee_id"

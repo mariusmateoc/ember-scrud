@@ -1,0 +1,37 @@
+
+{{!-- /app/employees/new/template.hbs --}}
+
+{{#crud-modal
+  title="Create New Employee"
+  submitButtonLabel="Add New Employee"
+  submit="createNewEmployee"
+  cancel="cancelNewEmployee"
+}}
+
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label for="firstName" class="col-sm-3 control-label">First Name:</label>
+      <div class="col-sm-9">
+        {{input type="text" class="form-control" value=firstName placeholder="Please insert first name"}}
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="lastName" class="col-sm-3 control-label">Last Name:</label>
+      <div class="col-sm-9">
+        {{input type="text" class="form-control" value=lastName placeholder="Please insert last name"}}
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email" class="col-sm-3 control-label">Email:</label>
+      <div class="col-sm-9">
+        {{input type="email" class="form-control" value=email placeholder="Please insert company email"}}
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="occupation" class="col-sm-3 control-label">Occupation:</label>
+      <div class="col-sm-9">
+        {{input type="text" class="form-control" value=occupation placeholder="Please insert employee occupation"}}
+      </div>
+    </div>
+  </form>
+{{/crud-modal}}
