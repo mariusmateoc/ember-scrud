@@ -14,13 +14,17 @@ Router.map(function() {
     path: "client/:client_id"
   }, function() {});
 
-  this.resource("projects", function() {});
+  this.resource("projects", function() {
+    this.route("new");
+  });
 
   this.resource("project", {
     path: "project/:project_id"
   }, function() {});
 
-  this.resource("employees", function() {});
+  this.resource("employees", function() {
+    this.route("new");
+  });
 
   this.resource("employee", {
     path: "employee/:employee_id"

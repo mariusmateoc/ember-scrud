@@ -1,0 +1,30 @@
+
+{{!-- /app/projects/new/template.hbs --}}
+{{#crud-modal
+  title="Create New Project"
+  submitButtonLabel="Add New Project"
+  submit="createNewProject"
+  cancel="cancelNewProject"
+}}
+
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label for="companyName" class="col-sm-3 control-label">Project Name:</label>
+      <div class="col-sm-9">
+        {{input type="text" class="form-control" value=name placeholder="Please insert project name"}}
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email" class="col-sm-3 control-label">Project Type:</label>
+      <div class="col-sm-9">
+        {{input type="text" class="form-control" value=projectType placeholder="Please insert project type"}}
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="number" class="col-sm-3 control-label">Project Amount:</label>
+      <div class="col-sm-9">
+        {{input type="number" class="form-control" value=amount placeholder="Please insert project amount"}}
+      </div>
+    </div>
+  </form>
+{{/crud-modal}}
